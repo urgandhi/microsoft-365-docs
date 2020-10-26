@@ -89,7 +89,7 @@ Spoofing is when the From address in an email message (the sender address that's
 
 The following spoof settings are available in anti-phishing policies and ATP anti-phishing policies:
 
-- **Anti-spoofing protection**: Enables or disables anti-spoofing protection. We recommend that you leave it enabled. You use the **spoof intelligence policy** to allow or block specific spoofed internal and external senders. For more information, see [Configure spoof intelligence in Microsoft 365](learn-about-spoof-intelligence.md).
+- **Spoof intelligence**: Enables or disables anti-spoofing protection. We recommend that you leave it enabled. You use the **spoof intelligence policy** to allow or block specific spoofed internal and external senders. For more information, see [Configure spoof intelligence in Microsoft 365](learn-about-spoof-intelligence.md).
 
   > [!NOTE]
   > Spoof settings are enabled by default in the default anti-phishing policy in EOP, the default ATP anti-phishing policy, and in new custom anti-phishing policies or ATP anti-phishing policies that you create. <br/><br/> You don't need to disable anti-spoofing protection if your MX record doesn't point to Microsoft 365; you enable Enhanced Filtering for Connectors instead. For instructions, see [Enhanced Filtering for Connectors in Exchange Online](https://docs.microsoft.com/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
@@ -104,6 +104,9 @@ The following spoof settings are available in anti-phishing policies and ATP ant
     - [Manage quarantined messages and files as an admin in Microsoft 365](manage-quarantined-messages-and-files.md)
     - [Find and release quarantined messages as a user in Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
 
+ > [!NOTE]
+  > For Intra-Org messages (or Internal messages), anti-spoofing protection is always On despite setting this to Off. In this case, either of the actions specified above will take place and send the message to Junk Email folder or to quarantine. For more information, see [Different types of spoofing](anti-spoofing-protection.md#different-types-of-spoofing.md).
+  
 - **Unauthenticated Sender**: See the information in the next section.
 
 ### Unauthenticated Sender
